@@ -1,0 +1,1 @@
+select SalesPerson.name from SalesPerson left outer join Orders on SalesPerson.sales_id = Orders.sales_id left outer join Company on Orders.com_id = Company.com_id group by SalesPerson.name having min(length(Company.name)) > 3 OR min(length(Company.name)) is null
