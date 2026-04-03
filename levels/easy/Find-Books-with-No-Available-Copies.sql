@@ -1,0 +1,1 @@
+select book_id, title , author , genre,publication_year, total_copies as current_borrowers from library_books as l_b where total_copies = (select count(*) from borrowing_records as b_r where l_b.book_id = b_r.book_id and return_date is null) order by current_borrowers DESC , title ASC;
