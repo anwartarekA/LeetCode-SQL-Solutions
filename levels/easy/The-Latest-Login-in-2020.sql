@@ -1,0 +1,1 @@
+select user_id , last_stamp from(select user_id , max(time_stamp) filter (where time_stamp between '2020-01-01 00:00:00'::timestamp and '2020-12-31 23:59:59'::timestamp)  as last_stamp from Logins group by user_id) result where result.last_stamp is not null;
