@@ -1,0 +1,1 @@
+select coalesce(e_id,s_id) as employee_id from (select Employees.employee_id as e_id, name , Salaries.employee_id as s_id , salary from Employees full outer join Salaries on Employees.employee_id = Salaries.employee_id where name is null or salary is null)as r;
