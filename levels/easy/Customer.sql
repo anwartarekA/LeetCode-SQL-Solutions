@@ -1,0 +1,1 @@
+select customer_id , count(visit_id) as count_no_trans  from (select customer_id , visit_id  from(select customer_id , coalesce(Transactions.visit_id , 0) as visit_id from Visits left outer join Transactions on Visits.visit_id = Transactions.visit_id where coalesce(Transactions.visit_id , 0) = 0) as result1)as result2 group by customer_id order by count_no_trans DESC;
