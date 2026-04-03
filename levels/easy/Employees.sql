@@ -1,0 +1,1 @@
+select m.employee_id from (select manager_id , employee_id from Employees where salary < 30000 and manager_id is not null) as m left outer join Employees on m.manager_id = Employees.employee_id where Employees.employee_id is null order by m.employee_id;
