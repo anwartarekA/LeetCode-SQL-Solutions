@@ -1,0 +1,1 @@
+select machine_id , ROUND((each_sum/process_num)::NUMERIC , 3)as processing_time from(select machine_id , sum(total_time) as each_sum , count(*) as process_num  from(select machine_id , process_id , (max(timestamp)-min(timestamp))as total_time from Activity group by machine_id , process_id) as res1 group by machine_id)as res2
