@@ -1,0 +1,3 @@
+select user_id , reaction as dominant_reaction , ROUND(reaction_ratio::numeric / 100 ,2) as reaction_ratio  from (select user_id , reaction , max(counting) as total_count , ROUND((max(each_count)::numeric / max(counting)::numeric) * 100, 2) as reaction_ratio  from (select * from (select user_id , count(*) as counting from reactions group by user_id ) as res1
+inner join
+(select user_id as id , reaction , count(*) as each_count from reactions group by user_id , reaction ) as res2 on res1.user_id = res2.id where counting >= 5) as res3 group by user_id , reaction) as res4 where reaction_ratio >= 60 order by reaction_ratio DESC , user_id ASC;
