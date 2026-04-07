@@ -1,0 +1,3 @@
+select customer_id from (select res1.customer_id , max(trans_count) as trans_count , max(days) as days , ROUND((count(transaction_type)::numeric / max(trans_count::numeric)) * 100 , 2) as refund_rate from (select customer_id , count(transaction_id) as trans_count ,(max(transaction_date) - min(transaction_date)) as days from customer_transactions group by customer_id having count(transaction_id) >= 3) as res1
+left outer join 
+(select customer_id , transaction_type from customer_transactions where transaction_type = 'refund') as res2 on res1.customer_id = res2.customer_id where res1.days >= 30 group by res1.customer_id ) as res3 where refund_rate < 20 order by customer_id ASC;
