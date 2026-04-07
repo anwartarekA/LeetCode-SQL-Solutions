@@ -1,0 +1,1 @@
+SELECT DISTINCT Product.product_id , Product.product_name FROM Product JOIN (SELECT DISTINCT * FROM Sales WHERE product_id IN (SELECT product_id FROM Sales GROUP BY product_id HAVING MAX(sale_date) <= '2019-03-31' AND MIN(sale_date) >= '2019-01-01'))  AS S ON S.product_id = Product.product_id;

@@ -1,0 +1,6 @@
+SELECT contest_id , (CASE WHEN COUNT(DISTINCT user_id)::NUMERIC = (SELECT COUNT(*) FROM Users)::NUMERIC THEN ROUND(100,2)
+ELSE ROUND(COUNT(DISTINCT user_id)::NUMERIC * 100 / (SELECT COUNT(*) FROM Users)::NUMERIC,2)
+END) AS percentage FROM
+Register
+GROUP BY contest_id
+ORDER BY percentage DESC, contest_id ASC;

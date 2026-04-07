@@ -1,0 +1,3 @@
+(SELECT Employees.employee_id FROM Employees FULL OUTER JOIN Salaries ON Employees.employee_id = Salaries.employee_id WHERE
+(Employees.name IS NULL OR Salaries.salary IS NULL ) AND Employees.employee_id IS NOT NULL) UNION ALL (SELECT Salaries.employee_id FROM Employees FULL OUTER JOIN Salaries ON Employees.employee_id = Salaries.employee_id WHERE
+(Employees.name IS NULL OR Salaries.salary IS NULL)  AND Salaries.employee_id IS NOT NULL) ORDER BY employee_id ASC;

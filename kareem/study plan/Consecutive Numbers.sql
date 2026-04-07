@@ -1,0 +1,2 @@
+SELECT DISTINCT num AS ConsecutiveNums FROM Logs a1
+WHERE a1.id = (SELECT MIN(id) FROM (SELECT a2.id , num FROM Logs a2 WHERE a2.id - a1.id <= 2 AND a2.id - a1.id >= 0) GROUP BY num HAVING COUNT(num) >= 3);
