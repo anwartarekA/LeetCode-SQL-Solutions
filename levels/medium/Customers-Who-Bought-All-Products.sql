@@ -1,0 +1,1 @@
+select customer_id from Customer group by customer_id having count(distinct product_key)=(select count(product_key) from Product) and min(product_key) = (select min(product_key) from Product) and max(product_key) = (select max(product_key) from Product) 
