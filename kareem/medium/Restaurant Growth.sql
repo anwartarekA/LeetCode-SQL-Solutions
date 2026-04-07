@@ -1,0 +1,1 @@
+SELECT DISTINCT visited_on , amount , ROUND(amount / 7::NUMERIC , 2) AS average_amount FROM (SELECT c.visited_on,  (SELECT SUM(amount) FROM Customer c2 WHERE c.visited_on - c2.visited_on <= 6 AND c.visited_on - c2.visited_on >= 0 ) AS amount FROM Customer c ORDER BY visited_on ASC ) WHERE visited_on - (SELECT visited_on FROM Customer ORDER BY visited_on ASC LIMIT 1) >= 6;
