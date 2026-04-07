@@ -1,0 +1,1 @@
+select employee_id , name ,reports_count , average_age from Employees inner join (select reports_to , count(*) as reports_count, round(avg(age)) as average_age from Employees group by reports_to having reports_to is not null) as res on Employees.employee_id = res.reports_to order by employee_id;
