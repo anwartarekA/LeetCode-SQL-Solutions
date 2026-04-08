@@ -77,3 +77,7 @@ A structured SQL learning path that includes:
 - ✔️ Clear structure organized by difficulty level
 - ✔️ Practical and interview-focused problems
 - ✔️ Clean and readable SQL queries
+
+### 🏅 Achievements
+Here’s the medal we won:
+[![Medal](https://assets.leetcode.com/static_assets/others/Top_SQL_50.png)](https://assets.leetcode.com/static_assets/others/Top_SQL_50.png)
