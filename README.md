@@ -23,3 +23,13 @@ Covers fundamental SQL concepts:
 📁 [Open Level 1 anwar](https://github.com/anwartarekA/LeetCode-SQL-Solutions/tree/main/anwar/levels/easy)
 
 📁 [Open Level 1 kareem](https://github.com/anwartarekA/LeetCode-SQL-Solutions/tree/main/kareem/levels/easy)
+---
+🟡 Level 2 — Intermediate
+Focuses on more advanced querying:
+
+- JOINs (INNER, LEFT, RIGHT)
+- Subqueries
+- CASE statements
+- Window functions
+
+📁 Open Level 2 Folder
