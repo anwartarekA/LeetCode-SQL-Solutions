@@ -6,5 +6,5 @@ This repository contains fully solved SQL interview questions across three diffi
 
 All problems are solved using PostgreSQL, with a focus on writing clean, efficient, and production-ready queries.
 👨‍💻 Contributors:
-- [Eng/ Anwar Tarek.]()
+- [Eng/ Anwar Tarek.](https://github.com/anwartarekA)
 - [Eng/ Kareem Tarek.]()
