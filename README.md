@@ -33,4 +33,47 @@ Focuses on more advanced querying:
 - CASE statements
 - Window functions
 
-📁 Open Level 2 Folder
+📁 [Open Level 2 kareem](https://github.com/anwartarekA/LeetCode-SQL-Solutions/tree/main/kareem/levels/medium) 
+
+📁 [Open Level 2 anwar](https://github.com/anwartarekA/LeetCode-SQL-Solutions/tree/main/anwar/levels/medium)
+
+---
+
+🔴 Level 3 — Advanced
+
+Advanced SQL problem solving:
+
+- Complex queries
+- Advanced window functions
+- CTEs (WITH clause)
+- Query optimization techniques
+
+📁 [Open Level 3 anwar](https://github.com/anwartarekA/LeetCode-SQL-Solutions/tree/main/anwar/levels/hard)
+
+📁 [Open Level 3 kareem](https://github.com/anwartarekA/LeetCode-SQL-Solutions/tree/main/kareem/levels/hard)
+
+---
+
+📚 Study Plan
+
+A structured SQL learning path that includes:
+
+- Step-by-step progression
+- Practical application for each level
+- Interview-focused preparation
+
+📁 [Open Study Plan kareem](https://github.com/anwartarekA/LeetCode-SQL-Solutions/tree/main/kareem/levels/study%20plan)
+
+📁 [Open Study Plan anwar](https://github.com/anwartarekA/LeetCode-SQL-Solutions/tree/main/anwar/levels/study%20plan)
+
+---
+⚙️ Tech Stack
+
+🐘 PostgreSQL
+
+
+💡 Key Highlights
+- ✔️ All questions are fully solved using PostgreSQL
+- ✔️ Clear structure organized by difficulty level
+- ✔️ Practical and interview-focused problems
+- ✔️ Clean and readable SQL queries
